@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NER Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        textarea { width: 100%; height: 150px; }
+        button { margin-top: 10px; padding: 10px; }
+        .entity { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Named Entity Recognition (NER) Demo</h1>
+    <textarea id="inputText" placeholder="Enter text here..."></textarea>
+    <button onclick="performNER()">Analyze</button>
+    <div id="output"></div>
+
+    <script>
+        async function performNER() {
+            const text = document.getElementById('inputText').value;
+            const response = await fetch('/ner', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text })
+            });
+            const entities = await response.json();
+            displayEntities(entities);
+        }
+
+        function displayEntities(entities) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+            entities.forEach(entity => {
+                const entitySpan = document.createElement('span');
+                entitySpan.className = 'entity';
+                entitySpan.innerText = `${entity.text} [${entity.label}] `;
+                outputDiv.appendChild(entitySpan);
+            });
+        }
+    </script>
+</body>
+</html>
