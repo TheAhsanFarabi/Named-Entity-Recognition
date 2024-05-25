@@ -12,8 +12,8 @@ This project is a simple web application for Named Entity Recognition (NER) usin
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/ner-web-app.git
-    cd ner-web-app
+    git clone https://github.com/yourusername/Named-Entity-Recognition.git
+    cd Named-Entity-Recognition
     ```
 
 2. **Create a virtual environment** (optional but recommended):
@@ -37,7 +37,7 @@ This project is a simple web application for Named Entity Recognition (NER) usin
 
 2. **Open your web browser** and navigate to `http://127.0.0.1:5000/`.
 
-3. **Enter text** in the textarea and click "Analyze" to see the recognized entities.
+3. **Enter text** in the text area and click "Analyze" to see the recognized entities.
 
 ## Technologies
 
