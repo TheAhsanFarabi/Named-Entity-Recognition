@@ -12,14 +12,14 @@ This project is a simple web application for Named Entity Recognition (NER) usin
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/Named-Entity-Recognition.git
+    git clone https://github.com/TheAhsanFarabi/Named-Entity-Recognition.git
     cd Named-Entity-Recognition
     ```
 
 2. **Create a virtual environment** (optional but recommended):
     ```sh
     python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    venv\Scripts\activate
     ```
 
 3. **Install the dependencies**:
